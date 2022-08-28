@@ -33,6 +33,7 @@ public class Matriz {
             }
         }
     }
+// Realizado para Ejercicio2    
 
     public static void cargarChar(char[][] mat) {
         Scanner sc = new Scanner(System.in);
@@ -49,6 +50,7 @@ public class Matriz {
             }
         }
     }
+// Realizado para Ejercicio2 
 
     public static void imprimirDiagChar(char[][] mat) {
         int fil, col;
@@ -66,5 +68,21 @@ public class Matriz {
             System.out.println("");
         }
     }
+    // Realizado para Ejercicio3 
 
+    public static void cargarString(String[][] mat) {
+        Scanner sc = new Scanner(System.in);
+        int fil, col;
+        int cantFil, cantCol;
+        String valorLeido;
+        cantFil = mat.length;
+        cantCol = mat[0].length;
+        for (fil = 0; fil < cantFil; fil++) {
+            for (col = 0; col < cantCol; col++) {
+                System.out.println("Ingrese el valor en la fila " + (fil + 1) + " y la columna " + (col + 1));
+                valorLeido = sc.nextLine();
+                mat[fil][col] = valorLeido;
+            }
+        }
+    }
 }
