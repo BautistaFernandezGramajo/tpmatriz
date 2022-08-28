@@ -7,7 +7,7 @@ public class Ejercicio4 {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         // Ejercicio A
-        int[][] matriz = new int[2][6];
+        int[][] matriz = new int[10][6];
         cargarNotaAlumnos(matriz);
         // promedioAlumnos(matriz); // Punto A
         // Ejercicio B
