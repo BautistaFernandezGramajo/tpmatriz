@@ -14,6 +14,6 @@ public class Ejercicio5 {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        a
+        abdbda
     }
 }
