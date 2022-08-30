@@ -21,7 +21,7 @@ public class Ejercicio10 {
         System.out.print("Ingrese la columna que desea :");
         columnaS = sc.nextInt();
         int[] arregloCol;
-        arregloCol = guardarColumna(matriz, columnaS);
+        arregloCol = guardarColumna(matriz, columnaS); // falta modularizar
         System.out.println("El nuevo arreglo es: ");
         for (int i = 0; i < arregloCol.length; i++) {
             System.out.println(arregloCol[i]);
@@ -33,10 +33,13 @@ public class Ejercicio10 {
         int fil;
         int cantFil;
         cantFil = mat.length;
-        arr = new int[cantFil];
+        arr = new int[cantFil]; // Ya que la cantidad de elementos que tiene una columna esta det. por las filas...
         for (fil = 0; fil < cantFil; fil++) {
-            arr[fil] = mat[fil][columnaS-1];
+            // Las filas van cambiando pero las columnas no.
+            arr[fil] = mat[fil][columnaS-1]; 
         }
         return arr;
     }
+    
+    
 }
