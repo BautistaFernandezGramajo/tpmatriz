@@ -12,13 +12,13 @@ public class Ejercicio10 {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int cantF, cantC, columnaS;
-        System.out.println("Ingrese cant F. ");
+        System.out.print("Ingrese cant F. :");
         cantF = sc.nextInt();
-        System.out.println("Ingrese cant C. ");
+        System.out.print("Ingrese cant C. :");
         cantC = sc.nextInt();
         int[][] matriz = new int[cantF][cantC];
         Matriz.cargarInt(matriz);
-        System.out.println("Ingrese la columna que desea ");
+        System.out.print("Ingrese la columna que desea :");
         columnaS = sc.nextInt();
         int[] arregloCol;
         arregloCol = guardarColumna(matriz, columnaS);
@@ -35,7 +35,7 @@ public class Ejercicio10 {
         cantFil = mat.length;
         arr = new int[cantFil];
         for (fil = 0; fil < cantFil; fil++) {
-            arr[fil] = mat[fil][columnaS];
+            arr[fil] = mat[fil][columnaS-1];
         }
         return arr;
     }
