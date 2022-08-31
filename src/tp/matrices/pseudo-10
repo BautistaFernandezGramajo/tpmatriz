@@ -37,6 +37,7 @@ MODULO guardarColumna(ENTERO[][] mat, ENTERO columnaS) RETORNA ENTERO[]
 FIN MODULO guardarColumna
 
 MODULO imprimirArreglo(ENTERO[] arr) RETORNA ∅
+    // Dado un arreglo, imprime sus elementos
     PARA i=0 HASTA arr.longitud 
         ESCRIBIR(arr[i])
     FIN PARA
