@@ -23,11 +23,15 @@ public class Ejercicio10 {
         int[] arregloCol;
         arregloCol = guardarColumna(matriz, columnaS); // falta modularizar
         System.out.println("El nuevo arreglo es: ");
-        for (int i = 0; i < arregloCol.length; i++) {
-            System.out.println(arregloCol[i]);
+        imprimirArreglo(arregloCol);
+    }
+    
+    public static void imprimirArreglo(int[]arr){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]+ " ");
         }
     }
-
+    
     public static int[] guardarColumna(int[][] mat, int columnaS) {
         int[] arr;
         int fil;

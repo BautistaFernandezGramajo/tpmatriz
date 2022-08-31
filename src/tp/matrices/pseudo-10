@@ -1,0 +1,43 @@
+ALGORITMO ejercicio10() RETORNA ∅
+
+    // Consigna
+    /* A partir de una matriz numérica se desea generar un arreglo que contenga todos los elementos de una
+    columna dada. Diseñe un algoritmo que solicite al usuario las dimensiones de la matriz, la cargue, luego 
+    le solicite la columna con la cual desea cargar el arreglo, y una vez que lo cargue lo muestre por pantalla.*/
+    
+    ENTERO cantF, cantC, columnaS 
+    ESCRIBIR("Ingrese la cantidad de filas. :")
+    LEER(cantF)
+    ESCRIBIR("Ingrese la cantidad de columnas. :")
+    LEER(cantC)
+    // Defino y creo la matriz inicial según los parametros
+    ENTERO[][] matriz <- CREAR ENTERO[cantF][cantC] 
+    cargarInt(matriz)
+    ESCRIBIR("Ingrese la columna que desea :")
+    LEER(columnaS)
+    // Defino el arreglo donde se guardaran los elementos
+    ENTERO[] arregloCol
+    arregloCol = guardarColumna(matriz, columnaS) // Le asigno el arreglo creado en el modulo
+    ESCRIBIR("El nuevo arreglo es :")
+    imprimirArreglo(arregloCol)
+
+FIN ALGORITMO ejercicio10
+
+MODULO guardarColumna(ENTERO[][] mat, ENTERO columnaS) RETORNA ENTERO[]
+    // Dada una matriz y un valor entero que represente el valor de una columna,
+    // devuelve un arreglo que contiene los elementos de la misma.
+    ENTERO[] arr
+    ENTERO fil
+    ENTERO cantFil = mat.longitud
+    arr = CREAR ENTERO[cantFil] // Ya que la cantidad de elementos que tiene una columna esta det. por las filas.
+    PARA fil=0 HASTA cantFil-1
+        arr[fil] = mat[fil][columnaS-1]; 
+    FIN PARA
+    RETORNA arr
+FIN MODULO guardarColumna
+
+MODULO imprimirArreglo(ENTERO[] arr) RETORNA ∅
+    PARA i=0 HASTA arr.longitud 
+        ESCRIBIR(arr[i])
+    FIN PARA
+FIN MODULO
