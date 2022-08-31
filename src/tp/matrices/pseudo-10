@@ -41,3 +41,18 @@ MODULO imprimirArreglo(ENTERO[] arr) RETORNA ∅
         ESCRIBIR(arr[i])
     FIN PARA
 FIN MODULO
+
+MODULO cargarInt(ENTERO[][]mat) RETORNA ∅
+    // Dada una matriz, cargar datos de tipo entero.
+    ENTERO fil, col, cantFil, cantCol, valorLeido
+    cantFil = mat.longitud
+    cantCol = mat[0].longitud
+      PARA fil = 0 HASTA cantFil-1
+        PARA col=0 HASTA cantCol-1 
+           ESCRIBIR("Ingrese el valor en la fila " + (fil + 1) + " y la columna " + (col + 1))
+           LEER(valorLeido)
+           mat[fil][col = valorLeido
+        FIN PARA
+    FIN PARA
+FIN MODULO
+
